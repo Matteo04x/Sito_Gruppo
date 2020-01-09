@@ -1,0 +1,256 @@
+/* 
+4INB 16-11-2019
+
+Matteo Spiga
+Leone Pietro
+Alberto Lerose
+Federico Fedeli
+
+Codice CSS */
+
+html{box-sizing:border-box}*{box-sizing:inherit}
+
+/* Definisco la grandezza e il font dei vari caratteri*/
+html,body{font-family:"Verdana,sans-serif";font-size:15px;line-height:1.5;margin:0;}
+h2{font-size:30px}h3{font-size:24px}h4{font-size:20px}
+h2,h3,h4{font-family:"Segoe UI";font-weight:400;margin:10px 0}
+
+body :after,body :before{
+	content:"";
+	display:table;
+	clear:both;
+}
+
+/*Set di Istruzioni CSS per la barra di navigazione*/
+nav {
+  overflow: hidden;
+  background-color: #333; /*colore sfondo:  nero*/
+  font-family: Arial;     /*carattere del testo: Arial*/
+}
+
+nav a {
+  float: left;            /*la seguente proprietà permette di affiancare vari elementi*/
+  font-size: 16px;        /*grandezza del carattere di testo nella barra di navigazione*/
+  color: white;           /*colore del testo: bianco*/
+  text-align: center;     /*allineamento del testo al centro*/
+  padding: 14px 16px;     /*mi distanzio dall’alto e dal basso di 14 pixel, mi distanzio da sinistra e da destra di 16 pixel*/
+  text-decoration: none;
+}
+
+.Menu {
+  float: left;             /*la seguente proprietà permette di affiancare vari elementi*/
+  overflow: hidden;
+}
+
+.Menu .Barra {
+  border: none;
+  outline: none;
+  background-color: inherit;
+  font-size: 16px;            /*grandezza del carattere di testo nella barra di navigazione*/
+  color: white;               /*colore del testo: bianco*/
+  padding: 17px 16px;         /*mi distanzio dall’alto e dal basso di 17 pixel, mi distanzio da sinistra e da destra di 16 pixel*/
+
+}
+
+nav a:hover, .Menu:hover .Barra {
+  background-color: #228b22;  /*il colore dello sfondo quando il cursore passa sopra il box diventa verde*/
+}
+
+.Contenuto {
+  display: none;
+  position: absolute;
+  background-color: #333; /*colore sfondo:  nero*/
+  min-width: 100px;       /*definisco la minima larghezza dei box nella barra di navigazione ossia 100 pixel*/
+
+}
+
+.Contenuto a {
+  float: none;              /*la seguente proprietà fa sì che i vari elementi siano disposti in colonna*/
+  color: #c0c0c0;           /*colore del testo: argento*/
+  padding: 12px 16px;       /*mi distanzio dall’alto e dal basso di 12 pixel, mi distanzio da sinistra e da destra di 16 pixel*/
+  text-decoration: none;
+  display: block;           /*distanzio gli elementi*/
+  text-align: left;         /*allineamento del testo a sinistra*/
+}
+
+.Contenuto a:hover {
+  background-color: #808080; /*il colore dello sfondo quando il cursore passa sopra il box diventa grigio*/
+}
+
+.Menu:hover .Contenuto {
+  display: block;        /*distanzio gli elementi*/
+}
+
+article {
+	padding-left:16px; /*mi distanzio da sinistra di 16 pixel*/
+	padding-right:16px /*mi distanzio da destra di 16 pixel*/
+}
+
+.Riquadro{
+	margin-top:16px;     /*mi distanzio dall’alto di 16 pixel*/
+    margin-bottom:16px;  /*mi distanzio dal basso di 16 pixel*/
+    padding:0.16px 16px; /*mi distanzio dall’alto e dal basso di 0.16 pixel, mi distanzio da sinistra e da destra di 16 pixel*/
+} 
+
+.Intestazione{
+    background-color: #578058; /*colore sfondo titolo:  verdo scuro*/
+	padding:6px;               /*mi distanzio da tutti i lati di 6 pixel*/
+	width: auto;               /*proprietà che fa sì che la larghezza del riquadro si regoli in modo automatico*/
+	border-radius: 10px;       /*proprietà per arrotondare gli angoli del riquadro dove è contenuto il testo*/
+	color:#fff;                /*colore del testo: bianco*/
+}
+
+.Materia{
+    width: 25%;      /*stabilisco la percentuale della larghezza che l'oggetto andrà ad occupare*/
+    float: left;     /*la seguente proprietà permette di affiancare vari elementi*/
+    padding: 15px;   /*mi distanzio da tutti i lati di 15 pixel*/ 
+}
+
+.Paragrafo{
+	padding-top:64px;        /*mi distanzio dall’alto di 64 pixel*/
+	padding-bottom:64px;     /*mi distanzio dal basso di 64 pixel*/
+}
+
+.Immagine{
+    width: 100%;     /*stabilisco la percentuale della larghezza che l'immagine andrà ad occupare*/
+    height: auto;    /*l'altezza dell'immagine viene stabilita in modo automatico*/
+}
+
+.In_Linea{
+	display:inline-block;
+}
+
+.Tabella{
+  width: 100%;
+}
+#Angolo1{
+	-webkit-border-radius: 20px 0px 0px 0px;
+}
+#Angolo2{
+	-webkit-border-radius: 0px 20px 0px 0px;
+}
+#Angolo3{
+	-webkit-border-radius: 0px 0px 0px 20px;
+}
+#Angolo4{
+	-webkit-border-radius: 0px 0px 20px 0px;
+}
+td.Colonna{
+  padding: 15px;
+  text-align: left;
+  border: 5px solid #578058;
+  width: 25%;
+}
+
+.Riga:nth-child(even) .Colonna{
+  background-color: #9BBB9C;
+  color: black;
+}
+
+.Riga:nth-child(odd) .Colonna{
+  background-color: #D8E3D8;
+  color: black;
+}
+
+th.Colonna{
+  background-color: #578058;
+  color: white;
+  padding: 15px;
+}
+
+.Footer{ /*Generalità di tutto il footer*/
+	background-color: #262626;
+	border: 3px solid green;
+	padding: 30px;
+	overflow: hidden;
+}
+
+.Credits{ /*Caratteristiche dei crediti*/
+	color: #CCCCCC;
+	text-align: center;
+	width: 33%;
+	float: left;
+}
+
+.Contacts{ /*Caratterisitiche dei contatti*/
+	color: #CCCCCC;
+	text-align: center;
+	width: 33%;
+	float: left;
+}
+
+.Indirizzo{ /*Caratteristiche del link per la mappa*/
+	text-decoration: none;
+	color: #CCCCCC;
+}
+
+.Indirizzo:hover{ /*Quando si punta con il mouse l'indirizzo si scurisce*/
+	color: grey;
+}
+
+.Social{ /*Caratteristiche dei link ai social*/
+	color: #CCCCCC;
+	text-align: center;
+	width: 33%;
+	float: left;
+}
+
+.Logo{ /*Caratteristiche del logo montani*/
+	width: 800px;
+	margin: auto;
+	margin-bottom: 30px;
+}
+
+.Immagine{ /*Definizione dell'immagine del montani*/
+	width: 100%;
+	height: auto;
+}
+
+.Title{ /*Caratteristiche del titolo di ogni sezione*/
+	color: #FFFFFF;
+	margin-bottom: 30px;
+	font-size: 30px;
+}
+
+.Campo{ /*Caratteristiche di ogni campo delle sezioni*/
+	margin-bottom: 15px;
+	overflow: hidden;
+}
+
+.Icona{	/*Caratteristiche delle immagini dei social*/
+	text-decoration: none;
+	width: 60px;
+	height: 60px;
+	margin-right: 20px;
+}
+
+.Icona:hover{ /*Quando si puntano i social si scuriscono*/
+	opacity: 0.5;
+}
+
+@media (min-width: 600px) {/*fa si che il layout rimanga lo stesso nonostante lo schermo aumenti o diminuisca*/
+ .Box{
+		width:50%;                  /*stabilisco la percentuale della larghezza che il contenitore andrà ad occupare*/
+	    text-align:center;          /*allineamento del testo al centro*/
+		margin:125px auto;          /*mi distanzio dall’alto e dal basso di 125 pixel, mi distanzio da sinistra e da destra in modo automatico*/
+		background-color: #ededed;  /*colore sfondo:  grigio scuro*/
+		padding: 20px 90px;         /*mi distanzio dall’alto e dal basso di 20 pixel, mi distanzio da sinistra e da destra di 90 pixel*/
+		border-radius: 15px;        /*proprietà per arrotondare gli angoli del riquadro dove è contenuto il testo*/
+	}
+}
+
+@media (min-width:600px){/*fa si che il layout rimanga lo stesso nonostante lo schermo aumenti o diminuisca*/
+	.Distanza_Immagini{
+		float:left;        /*Fa si che possa affiancare delle immagini*/
+		width:50%;         /*stabilisco la percentuale della larghezza che il contenitore andrà ad occupare*/
+		text-align:center; /*allineamento del testo al centro*/
+	}
+}
+
+@media (min-width:600px){/*fa si che il layout rimanga lo stesso nonostante lo schermo aumenti o diminuisca*/
+	.Descrizione{
+        margin-top: 15px;   /*mi distanzio dall’alto di 15 pixel*/
+        width: 100%;        /*stabilisco la percentuale della larghezza che il contenitore andrà ad occupare*/
+		text-align: center; /*allineamento del testo al centro*/
+    }
+}
